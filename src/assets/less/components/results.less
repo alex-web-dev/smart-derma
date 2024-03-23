@@ -1,0 +1,37 @@
+.results {
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__slider {
+    user-select: none;
+  }
+
+  &__slide {
+    margin-right: 27px;
+    width: calc(99.99% / 12 * 4 - 17px);
+  }
+
+  &__pagination {
+    margin-top: 24px;
+  }
+
+  @media (max-width: 767px) {
+    &__title {
+      margin-bottom: 14px;
+    }
+    
+    &__pagination {
+      margin-top: 20px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__slider {
+      margin-right: -15px;
+      margin-left: -15px;
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+  }
+}

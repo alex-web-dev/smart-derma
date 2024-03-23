@@ -1,0 +1,141 @@
+.menu {
+  position: relative;
+
+  &__content {
+    padding-bottom: 10px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    opacity: 0;
+  }
+
+  .simplebar-content &__list {
+    opacity: 1;
+  }
+
+  .simplebar-content &__item {
+    &:not(:first-child) {
+      margin-left: 39px;
+      padding-left: 39px;
+    }
+  }
+
+  &__item {
+    flex: 0 0 auto;
+
+    &:not(:first-child) {
+      margin-left: 41px;
+      padding-left: 41px;
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: @color-primary-dark;
+    transition: opacity 0.3s;
+
+    &-icon {
+      margin-right: 8px;
+    }
+
+    &--active {
+      font-weight: 700;
+      color: @color-primary;
+    }
+  }
+
+  &__item:not(:first-child) &__link {
+    &:before {
+      content: "";
+      position: absolute;
+      left: -41px;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 24px;
+      width: 1px;
+      background-color: #f0f0f0;
+      pointer-events: none;
+    }
+  }
+
+  &__submenu {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    margin-top: 3px;
+    z-index: 5;
+    max-width: 100%;
+    visibility: hidden;
+    opacity: 0;
+
+    &--active {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__item--active &__link {
+    opacity: 0.5;
+  }
+
+  @media (max-width: 767px) {
+    position: relative;
+
+    &__toggle {
+      position: relative;
+      z-index: 1;
+      display: block;
+    }
+
+    &__list {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 3;
+      transform: translateX(100%);
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
+      padding: 34px 24px;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      opacity: 0;
+      visibility: hidden;
+      overflow-y: auto;
+      transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+    }
+
+    &__item {
+      &:not(:first-child) {
+        margin-top: 20px;
+        margin-left: 0;
+      }
+    }
+
+    .simplebar-content &__item {
+      &:not(:first-child) {
+        margin-top: 20px;
+        margin-left: 0;
+      }
+    }
+
+    &__link {
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    &--active &__list {
+      transform: translateX(0);
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}

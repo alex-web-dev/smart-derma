@@ -1,0 +1,261 @@
+.footer {
+  background-color: #262626;
+
+  &__body {
+    padding-left: 269px;
+  }
+
+  &__top {
+    padding-top: 38px;
+
+    &-content {
+      display: flex;
+    }
+  }
+
+  &__column {
+    flex: 0 0 auto;
+
+    &:first-child {
+      width: 29%;
+    }
+
+    &:nth-child(2) {
+      width: 18.5%;
+    }
+
+    &:nth-child(3) {
+      width: 25%;
+    }
+
+    &:nth-child(4) {
+      width: 27.5%;
+    }
+
+    &:not(:first-child) {
+      padding-left: 36px;
+      border-left: 1px solid #2c2c2c;
+    }
+
+    &:not(:last-child) {
+      padding-right: 30px;
+    }
+  }
+
+  &__text {
+    line-height: 1.57;
+    color: #d2d2d2;
+
+    &--license {
+      margin-top: 34px;
+    }
+  }
+
+  &__menu {
+    &-item {
+      &:not(:first-child) {
+        margin-top: 8px;
+      }
+    }
+
+    &-link {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.285;
+      color: #fff;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #d2d2d2;
+      }
+    }
+  }
+
+  &__address {
+    &:not(:first-child) {
+      margin-top: 18px;
+    }
+
+    &-label {
+      margin-bottom: 4px;
+      padding-left: 25px;
+      font-size: 14px;
+      line-height: 1.57;
+      color: #9c9c9c;
+    }
+
+    &-link {
+      display: inline-flex;
+      font-size: 15px;
+      line-height: 1.47;
+    }
+
+    &-icon {
+      flex: 0 0 auto;
+      width: 16px;
+      margin-right: 7px;
+      display: flex;
+      align-items: flex-start;
+    }
+  }
+
+  &__bottom {
+    margin-top: 20px;
+    background-color: #282828;
+
+    &-content {
+      padding: 24px 0 21px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__social-btns {
+    &:not(:first-child) {
+      margin-left: 16px;
+    }
+  }
+
+  @media (max-width: 1360px) {
+    &__column {
+      &:not(:first-child) {
+        padding-left: 25px;
+      }
+  
+      &:not(:last-child) {
+        padding-right: 20px;
+      }
+    }
+  }
+
+  @media (max-width: 1180px) {
+    &__column {
+      &:first-child {
+        width: 26%;
+      }
+  
+      &:nth-child(2) {
+        width: 21.5%;
+      }
+  
+      &:not(:first-child) {
+        padding-left: 15px;
+      }
+  
+      &:not(:last-child) {
+        padding-right: 12px;
+      }
+    }
+
+    &__logo {
+      display: block;
+      width: 165px;
+    }
+
+    &__text {
+      &--license {
+        margin-top: 24px;
+      }
+    }
+
+    &__address {
+      &-label {
+        font-size: 13px;
+      }
+
+      &-link {
+        font-size: 14px;
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    &__container {
+      padding: 0;
+    }
+    
+    &__body {
+      padding-left: 0;
+    }
+
+    &__bottom {
+      &-content {
+        padding: 15px 0 16px;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    &__top {
+      &-content {
+        flex-wrap: wrap;
+      }
+    }
+
+    &__column {
+      &:not(:first-child) {
+        padding-left: 0;
+        border-left: none;
+      }
+
+      &:not(:last-child) {
+        padding-right: 0;
+      }
+
+      &:first-child {
+        margin-bottom: 18px;
+        padding-bottom: 7px;
+        width: 100%;
+      }
+
+      &:nth-child(2) {
+        padding-right: 20px;
+        width: 45.5%;
+      }
+
+      &:nth-child(3) {
+        width: 54.5%;
+      }
+
+      &:nth-child(4) {
+        width: 100%;
+        margin-top: 13px;
+        padding-top: 7px;
+        border-top: 1px solid #2c2c2c;
+      }
+    }
+
+    &__menu {
+      &-item {
+        &:not(:first-child) {
+          margin-top: 7px;
+        }
+      }
+
+      &-link {
+        font-size: 13px;
+      }
+    }
+
+    &__address {
+      &:not(:first-child) {
+        margin-top: 15px;
+      }
+
+      &-label {
+        margin-bottom: 2px;
+      }
+
+      &-link {
+        font-size: 15px;
+      }
+    }
+
+    &__bottom {
+      &-content {
+        padding: 10px 0 11px;
+      }
+    }
+  }
+}

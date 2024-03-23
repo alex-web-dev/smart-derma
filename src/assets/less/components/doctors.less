@@ -1,0 +1,56 @@
+.doctors {
+  padding-top: 70px;
+
+  &__title {
+    margin-bottom: 25px;
+  }
+
+  &__list {
+    margin: -26px -13px 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin: 26px 13px 0;
+    width: calc(99.99% / 12 * 4 - 26px);
+  }
+
+  @media (max-width: 1180px) {
+    &__list {
+      margin: -20px -10px 0;
+    }
+  
+    &__item {
+      margin: 20px 10px 0;
+      width: calc(99.99% / 12 * 4 - 20px);
+    }
+  }
+
+  @media (max-width: 991px) {
+    padding-top: 50px;
+  }
+
+  @media (max-width: 767px) {
+    padding-top: 30px;
+
+    &__title {
+      margin-bottom: 20px;
+    }
+
+    &__list {
+      margin: -8px -4px 0;
+    }
+  
+    &__item {
+      margin: 8px 4px 0;
+      width: calc(99.99% / 12 * 4 - 8px);
+    }
+  }
+
+  @media (max-width: 640px) {
+    &__item {
+      width: calc(50% - 8px);
+    }
+  }
+}

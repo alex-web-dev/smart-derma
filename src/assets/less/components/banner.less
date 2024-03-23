@@ -1,0 +1,24 @@
+.banner {
+  position: relative;
+
+  &__navigation {
+    position: absolute;
+    left: 48px;
+    bottom: 38px;
+    z-index: 1;
+    display: flex;
+
+    &-btn {
+      &:not(:first-child) {
+        margin-left: 5px;
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    &__navigation {
+      left: 15px;
+      bottom: 30px;
+    }
+  }
+}

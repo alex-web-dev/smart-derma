@@ -1,0 +1,60 @@
+.blog-count {
+  padding: 12px 39px 12px 23px;
+  height: 64px;
+  border: 1px solid #eeeeee;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+
+  &__text {
+    margin-right: 22px;
+    color: #4f5a65;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    display: flex;
+
+    &:not(:first-child) {
+      &:before {
+        margin: 0 4px;
+        content: '/';
+        display: inline-block;
+        font-weight: 400;
+        line-height: 1.25;
+        color: #8b8b8b;
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__btn {
+    line-height: 1.25;
+    font-weight: 700;
+    color: #8b8b8b;
+
+    &--active {
+      color: @color-primary;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      cursor: default;
+    }
+  }
+
+  @media (max-width: 767px) {
+    padding: 10px 12px;
+    height: 46px;
+
+    &__text {
+      margin-right: 15px;
+      font-size: 14px;
+    }
+
+    &__btn {
+      font-size: 14px;
+    }
+  }
+}

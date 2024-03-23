@@ -1,0 +1,28 @@
+.select {
+  &__field {
+    display: none;
+  }
+
+  &__error {
+    margin-top: 5px;
+    display: none;
+    font-size: 14px;
+    color: @color-danger;
+  }
+
+  &--error &__error {
+    display: block;
+  }
+
+  &--error .simple-select__field {
+    border-color: @color-danger;
+  }
+
+  &--white {
+    .simple-select__field {
+      background-color: #fff;
+      border: 1px solid #d7d7d7;
+      color: #151515;
+    }
+  }
+}

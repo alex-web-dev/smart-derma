@@ -1,0 +1,41 @@
+.advice {
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__slider {
+    user-select: none;
+    
+    &-footer {
+      margin-top: 40px;
+      position: relative;
+      z-index: 1;
+      display: flex;
+    }
+  }
+
+  &__pagination {
+    position: absolute;
+    left: 50%;
+    top: -6px;
+    transform: translateX(-50%);
+    align-self: flex-start;
+  }
+
+  @media (max-width: 767px) {
+    &__slider {
+      margin-left: -15px;
+      margin-right: -15px;
+      padding-left: 15px;
+      padding-right: 15px;
+
+      &-footer {
+        margin-top: 24px;
+
+        &-btn {
+          display: none;
+        }
+      }
+    }
+  }
+}

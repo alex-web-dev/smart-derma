@@ -1,0 +1,53 @@
+.review-ratings {
+  &__title {
+    margin: 0 auto 46px;
+    max-width: 738px;
+  }
+
+  &__item-btn {
+    margin-top: 38px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+  
+  &__item:hover &__item-btn {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__pagination {
+    margin-top: 20px;
+  }
+
+  @media (max-width: 991px) {
+    &__title  {
+      margin-bottom: 32px;
+      max-width: 700px;      
+    }
+  }
+
+  @media (max-width: 767px) {
+    &__title  {
+      margin-bottom: 24px;
+      max-width: 540px;      
+    }
+
+    &__slider {
+      margin: 0 -15px;
+      padding: 0 15px;
+    }
+
+    &__item-btn {
+      margin-top: 24px;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__title {
+      max-width: 345px;
+    }
+  }
+}

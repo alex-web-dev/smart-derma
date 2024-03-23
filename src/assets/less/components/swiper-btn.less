@@ -1,0 +1,47 @@
+.swiper-btn {
+  position: relative;
+  width: 33px;
+  height: 33px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 50%;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #ebebeb;
+  }
+
+  img {
+    position: relative;
+    z-index: 1;
+    max-height: 10px;
+  }
+
+  &.swiper-button-disabled {
+    cursor: default;
+  }
+
+  @media (max-width: 767px) {
+    width: 27px;
+    height: 27px;
+
+    &:before {
+      width: 20px;
+      height: 20px;
+    }
+
+    img {
+      margin-left: 2px;
+      max-height: 8px;
+    }
+  }
+}

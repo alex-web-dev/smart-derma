@@ -1,0 +1,45 @@
+.procedures {
+  &__title {
+    margin-bottom: 27px;
+  }
+
+  &__list {
+    margin: -17px -8.5px 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin: 17px 8.5px 0;
+    width: calc(25% - 17px);
+  }
+
+  @media (max-width: 1180px) {
+    &__item {
+      width: calc(99.99% / 12 * 4 - 17px);
+    }
+  }
+
+  @media (max-width: 767px) {
+    &__title {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    &__item {
+      width: calc(50% - 17px);
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__list {
+      margin: -8px -4px 0;
+    }
+  
+    &__item {
+      margin: 8px 4px 0;
+      width: calc(50% - 8px);
+    }
+  }
+}

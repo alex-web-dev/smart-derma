@@ -1,0 +1,111 @@
+.link {
+  transition: color 0.3s;
+
+  &:hover {
+    color: @color-primary;
+  }
+
+  &__icon {
+    &:first-child:not(:last-child) {
+      margin-right: 8px;
+    }
+
+    &:last-child:not(:first-child) {
+      margin-left: 8px;
+    }
+
+    &--mx-lg {
+      &:first-child:not(:last-child) {
+        margin-right: 10px;
+      }
+  
+      &:last-child:not(:first-child) {
+        margin-left: 10px;
+      }
+    }
+
+    &--mx-xl {
+      &:first-child:not(:last-child) {
+        margin-right: 15px;
+      }
+  
+      &:last-child:not(:first-child) {
+        margin-left: 15px;
+      }
+    }
+
+    &--mx-sm {
+      &:first-child:not(:last-child) {
+        margin-right: 6px;
+      }
+
+      &:last-child:not(:first-child) {
+        margin-left: 6px;
+      }
+    }
+
+    &--mx-xs {
+      &:first-child:not(:last-child) {
+        margin-right: 4px;
+      }
+
+      &:last-child:not(:first-child) {
+        margin-left: 4px;
+      }
+    }
+  }
+
+  &--roboto {
+    font-family: "Roboto", sans-serif;
+  }
+
+  &--primary {
+    color: @color-primary;
+  }
+  
+  &--dark {
+    color: #444;
+  }
+
+  &--gray-dark {
+    color: #555;
+  }
+
+  &--white {
+    color: #fff;
+  }
+
+  &--h-dark {
+    &:hover {
+      color: #444;
+    }    
+  }
+
+  &--h-white {
+    &:hover {
+      color: #fff;
+    }    
+  }
+
+  &--medium {
+    font-weight: 500;
+  }
+
+  &--semibold {
+    font-weight: 600;
+  }
+
+  &--line {
+    text-decoration: underline;
+    
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &--iflex {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,34 @@
+.langs {
+  display: flex;
+  align-items: center;
+  font-family: "NotoSans", sans-serif;
+
+  &__icon {
+    margin-right: 8px;
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+  }
+
+  &__btn {
+    color: #505050;
+
+    &--active {
+      color: @color-primary;
+      cursor: default;
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+  }
+
+  &__separator {
+    content: "/";
+    margin-left: 4px;
+    margin-right: 4px;
+    color: #b1b1b1;
+    cursor: default;
+  }
+}

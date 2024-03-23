@@ -1,0 +1,23 @@
+import "@/assets/less/styles.less";
+
+import "./menu.js";
+import "./mobile-menu.js";
+import "./tabs.js";
+import "./accordion.js";
+import "./simplebar.js";
+import "./igallery.js";
+import "./select.js";
+import "./imask.js";
+import "./form.js";
+import "./circle-progress.js";
+import "./smooth-scroll.js";
+import "./modal.js";
+import "./dropdown.js";
+import "./search-dropdown.js";
+import "./banner.js";
+import "./results.js";
+import "./diplomas.js";
+import "./reviews.js";
+import "./advice.js";
+import "./review-ratings.js";
+import "./interesting-modal.js";

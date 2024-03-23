@@ -1,0 +1,44 @@
+.contacts-form {
+  &__title {
+    margin-bottom: 16px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.39;
+    color: #fff;
+  }
+
+  &__input {
+    width: 100%;
+
+    &:not(:first-child) {
+      margin-top: 7px;
+    }
+  }
+
+  &__footer {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-btn {
+      min-width: 154px;
+      
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  @media (max-width: 1180px) {
+    &__title {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    &__footer {
+      margin-top: 20px;
+    }
+  }
+}

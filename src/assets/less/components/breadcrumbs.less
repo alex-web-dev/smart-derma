@@ -1,0 +1,43 @@
+.breadcrumbs {
+  &__list {
+    padding-bottom: 5px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    flex: 0 0 auto;
+    text-transform: uppercase;
+    font-size: 15px;
+    line-height: 2;
+    color: #8daaa9;
+
+    &:not(:first-child) {
+      margin-left: 10px;
+
+      &:before {
+        margin-right: 6px;
+        .pseudo-icon('../img/icons/arrow-light-blue.svg', 15px, 9px);
+      }
+    }
+  }
+
+  &__current {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 767px) {
+    &__item {
+      font-size: 14px;
+
+      &:not(:first-child) {
+        margin-left: 8px;
+  
+        &:before {
+          margin-right: 4px;
+          .pseudo-icon('../img/icons/arrow-light-blue.svg', 15px, 9px);
+        }
+      }
+    }
+  }
+}

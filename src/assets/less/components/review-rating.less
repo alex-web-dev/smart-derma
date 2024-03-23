@@ -1,0 +1,35 @@
+.review-rating {
+  display: flex;
+
+  &__circle {
+    flex: 0 0 auto;
+  }
+
+  &__info {
+    margin-top: 22px;
+    margin-left: 24px;
+  }
+
+  &__value {
+    font-size: 58px;
+    line-height: 1.2;
+    color: @color-primary-dark;
+  }
+
+  &__stars {
+    margin-top: 8px;
+  }
+
+  &__count {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #9f9f9f;
+  }
+
+  @media (max-width: 767px) {
+    &__info {
+      margin-top: 16px;
+      margin-left: 16px;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.search-dropdown {
+  position: relative;
+
+  &__btn {
+    position: relative;
+    z-index: 1;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: @color-primary-light;
+    border-radius: 50%;
+  }
+
+  &__input {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 0;
+    padding: 0 10px;
+    border-radius: 4px;
+    height: 35px;
+    border: none;
+    opacity: 0;
+    visibility: hidden;
+    background-color: @color-primary-light;
+    outline: none;
+    transition: width 0.5s, opacity 0.5s, visibility 0.5s;
+  }
+
+  &--active &__input {
+    width: 210px;
+    opacity: 1;
+    visibility: visible;
+  }
+}

@@ -1,0 +1,159 @@
+.form {
+  &__text {
+    font-size: 15px;
+
+    &:not(:first-child) {
+      margin-top: 3px;
+    }
+  }
+
+  &__main {
+    &:not(:first-child) {
+      margin-top: 23px;
+    }
+
+    &--mt-sm {
+      &:not(:first-child) {
+        margin-top: 13px;
+      }
+    }
+  }
+
+  &__group {
+    display: flex;
+
+    &:not(:first-child) {
+      margin-top: 14px;
+    }
+
+    &-input {
+      flex: 1 1 100%;
+
+      &:not(:first-child) {
+        margin-left: 8px;
+      }
+
+      &--lg {
+        flex: 1 1 108%;
+      }
+
+      &--xxl {
+        flex: 1 1 138%;
+      }
+    }
+  }
+
+  &__input {
+    &:not(:first-child) {
+      margin-top: 14px;
+    }
+  }
+
+  &__footer {
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+
+    &--mt-sm {
+      margin-top: 20px;
+    }
+  }
+
+  &__phone {
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+
+    &-icon {
+      margin-right: 9px;
+      flex: 0 0 auto;
+    }
+
+    &-label {
+      margin-bottom: 2px;
+      line-height: 1;
+      color: #8d8d8d;
+    }
+
+    &-link {
+      line-height: 1.22;
+      letter-spacing: 0.02em;
+      color: #151515;
+    }
+  }
+
+  &__btn {
+    max-width: 154px;
+  }
+
+  &__success {
+    display: none;
+
+    &-text {
+      margin-top: 3px;
+    }
+
+    &--sm {
+      max-width: 490px;
+    }
+  }
+
+  &__error {
+    display: none;
+
+    &-text {
+      margin-top: 3px;
+    }
+
+    &--sm {
+      max-width: 490px;
+    }
+  }
+
+  &--show-status.form--status-success &__content,
+  &--show-status.form--status-error &__content {
+    display: none;
+  }
+
+  &--show-status.form--status-success &__success {
+    display: block;
+  }
+
+  &--show-status.form--status-error &__error {
+    display: block;
+  }
+
+  @media (max-width: 767px) {
+    &__group {
+      flex-direction: column;
+
+      &:not(:first-child) {
+        margin-top: 7px;
+      }
+
+      &-input {
+        &:not(:first-child) {
+          margin-left: 0;
+          margin-top: 7px;
+        }
+      }
+    }
+
+    &__input {
+      &:not(:first-child) {
+        margin-top: 7px;
+      }
+    }
+
+    &__footer {
+      margin-top: 24px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__phone {
+      margin-top: 28px;
+      margin-left: 0;
+    }
+  }
+}

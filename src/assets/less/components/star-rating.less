@@ -1,0 +1,33 @@
+.star-rating {
+  &__list {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+  }
+    
+  &__item {
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    background: url('../../img/icons/star-empty.svg') center / contain no-repeat;
+
+    &:not(:first-child) {
+      margin-left: 2px;
+    }
+  }
+
+  &__active {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  &__active &__item {
+    background-image: url('../../img/icons/star.svg');
+  }
+}

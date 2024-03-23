@@ -1,0 +1,180 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+
+  &__common {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__sidebar {
+    position: sticky;
+    top: 0;
+    z-index: 11;
+    flex: 0 0 269px;
+    height: 100vh;
+  }
+
+  &__content {
+    padding-bottom: 90px;
+    flex: 1 1 auto;
+    min-width: 0;
+
+    &--pb-0 {
+      padding-bottom: 0;
+    }
+  }
+
+  &__section {
+    margin-top: 80px;
+
+    &--mt-sm {
+      margin-top: 70px;
+    }
+
+    &--mt-xs {
+      margin-top: 60px;
+    }
+  }
+
+  &__features {
+    margin-top: 70px;
+  }
+
+  &__reviews {
+    margin-top: 70px;
+  }
+
+  &__faq {
+    margin-top: 80px;
+  }
+
+  &__info {
+    margin-top: 60px;
+  }
+
+  &__result-cards {
+    margin-top: 70px;
+  }
+
+  &__service-info {
+    margin-top: 70px;
+  }
+
+  &__contacts {
+    margin-top: 60px;
+  }
+
+  @media (max-width: 991px) {
+    &__container {
+      padding: 0;
+    }
+
+    &__content {
+      padding-bottom: 60px;
+
+      &--pb-0 {
+        padding-bottom: 0;
+      }
+    }
+
+    &__body {
+      padding-top: 61px;
+    }
+
+    &__sidebar {
+      display: none;
+    }
+
+    &__section {
+      margin-top: 60px;
+
+      &--mt-sm {
+        margin-top: 50px;
+      }
+
+      &--mt-xs {
+        margin-top: 50px;
+      }
+    }
+
+    &__features {
+      margin-top: 60px;
+    }
+
+    &__reviews {
+      margin-top: 60px;
+    }
+
+    &__faq {
+      margin-top: 60px;
+    }
+
+    &__info {
+      margin-top: 50px;
+    }
+
+    &__result-cards {
+      margin-top: 60px;
+    }
+
+    &__service-info {
+      margin-top: 50px;
+    }
+
+    &__contacts {
+      margin-top: 50px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    &__content {
+      padding-bottom: 50px;
+
+      &--pb-0 {
+        padding-bottom: 0;
+      }
+    }
+
+    &__section {
+      margin-top: 45px;
+
+      &--mt-sm {
+        margin-top: 45px;
+      }
+
+      &--mt-xs {
+        margin-top: 40px;
+      }
+    }
+
+    &__features {
+      margin-top: 45px;
+    }
+
+    &__reviews {
+      margin-top: 45px;
+    }
+
+    &__faq {
+      margin-top: 55px;
+    }
+
+    &__info {
+      margin-top: 40px;
+    }
+
+    &__result-cards {
+      margin-top: 45px;
+    }
+
+    &__service-info {
+      margin-top: 40px;
+    }
+
+    &__contacts {
+      margin-top: 40px;
+    }
+  }
+}

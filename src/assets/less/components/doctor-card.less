@@ -1,0 +1,112 @@
+.doctor-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ededed;
+
+  &__img {
+    position: relative;
+    padding-top: min(120%, 400px);
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__exp {
+    position: absolute;
+    bottom: -22px;
+    right: 14px;
+    width: 63px;
+    height: 63px;
+    border-radius: 50%;
+    background-color: @color-primary;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    line-height: 1.2;
+    text-align: center;
+    color: #87a6a5;
+
+    &-value {
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+    }
+  }
+
+  &__info {
+    padding: 24px;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__position {
+    margin-top: 5px;
+    font-family: 'HypatiaSansPro', sans-serif;
+  }
+
+  &__title {
+    word-break: break-word;
+  }
+
+  &__footer {
+    margin-top: auto;
+  }
+
+  &__btn {
+    margin-top: 17px;
+    max-width: 100%;
+  }
+
+  @media (max-width: 1180px) {
+    &__info {
+      padding: 24px 16px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    &__title {
+      font-size: 15px;
+    }
+
+    &__position {
+      font-size: 14px;
+    }
+
+    &__btn {
+      margin-top: 14px;
+    }
+
+    &__exp {
+      bottom: -15px;
+      right: 8px;
+      width: 50px;
+      height: 50px;
+      font-size: 11px;
+      
+      &-value {
+        font-size: 14px;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__info {
+      padding: 16px 12px;
+    }
+  }
+
+  @media (max-width: 340px) {
+    &__info {
+      padding: 16px 8px;
+    }
+  }
+}

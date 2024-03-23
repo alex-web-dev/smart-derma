@@ -1,0 +1,174 @@
+.reviews {
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__header {
+    margin-bottom: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-btn {
+      margin-left: 20px;
+      min-width: 217px;
+      flex: 0 0 auto;
+    }
+  }
+
+  &__list-group {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -7px;
+
+    &:not(:first-child) {
+      margin-top: 14px;
+    }
+  }
+
+  &__item {
+    margin: 0 7px;
+  }
+
+  &__slider {
+    margin: -27px;
+    padding: 27px;
+    user-select: none;
+    
+    &-footer {
+      margin-top: 3px;
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__mobile-slider-box {
+    display: none;
+  }
+
+  &__pagination {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__slide {
+    &-columns {
+      display: flex;
+      align-items: center;
+    }
+
+    &-column {
+      &:not(:first-child) {
+        margin-left: 14px;
+      }
+    }
+
+    &-item {
+      width: 100%;
+      
+      &:not(:first-child) {
+        margin-top: 14px;
+      }
+    }
+  }
+
+  &__img {
+    position: absolute;
+    margin-top: -415px;
+    right: 0;
+    overflow: hidden;
+
+    img {
+      transform: translateX(163px);
+    }
+  }
+
+  @media (max-width: 1366px) {
+    &__img {
+      right: 0;
+    }
+  }
+
+  @media (max-width: 1180px) {
+    &__slider {
+      margin: -27px -15px;
+      padding: 27px 15px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    &__img {
+      display: none;
+    }
+  }
+
+  @media (max-width: 767px) {
+    &__title {
+      margin-bottom: 20px;
+    }
+
+    &__header {
+      margin-bottom: 20px;
+      
+      &-btn {
+        padding-left: 20px;
+        padding-right: 20px;
+        min-width: auto;
+      }
+    }
+
+    &__list-group {
+      margin-left: 0;
+      margin-right: 0;
+      flex-direction: column;
+    }
+
+    &__item {
+      margin-left: 0;
+      margin-right: 0;
+      min-width: 100%;
+
+      &:not(:first-child) {
+        margin-top: 14px;
+      }
+    }
+
+    &__slider-box {
+      display: none;
+    }
+
+    &__mobile-slider-box {
+      display: block;
+    }
+
+    &__mobile-slider {
+      margin: -27px -15px;
+      padding: 27px 15px;
+    }
+
+    &__mobile-slide {
+      height: auto;
+
+      &-item {
+        height: 100%;
+      }
+    }
+
+    &__mobile-pagination {
+      margin-top: 20px;
+    }
+  }
+
+  @media (max-width: 340px) {
+    &__header {
+      &-btn {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+  }
+}

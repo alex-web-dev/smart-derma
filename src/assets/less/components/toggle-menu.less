@@ -1,0 +1,56 @@
+.toggle-menu {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: @color-primary;
+  border-radius: 50%;
+
+  &__lines {
+    position: relative;
+    z-index: 6;
+
+    &,
+    &:before,
+    &:after {
+      transform: rotate(0);
+      height: 2px;
+      background-color: #fff;
+      display: block;
+      width: 18px;
+      transition: transform 0.3s, width 0.3s;
+    }
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      right: 0;
+    }
+
+    &:before {
+      transform: translateY(-5px);
+    }
+
+    &:after {
+      transform: translateY(5px);
+    }
+  }
+
+	&--active &__lines {
+		height: 0;
+
+		&:before {
+			transform: rotate(-45deg);
+      right: 1px;
+      top: -1px;
+		}
+
+		&:after {
+			transform: rotate(45deg);
+      right: 1px;
+      top: -1px;
+		}
+	}
+}

@@ -1,0 +1,65 @@
+.text {
+  font-size: 16px;
+  line-height: 1.5;
+
+  p:not(:first-child) {
+    margin-top: 15px;
+  }
+
+  &--sm {
+    font-size: 14px;
+  }
+
+  &--lg {
+    font-size: 18px;
+    line-height: 1.33;
+  }
+
+  &--xl {
+    font-size: 20px;
+    line-height: 1.33;
+  }
+
+  &--xxl {
+    font-size: 22px;
+    line-height: 1.27;
+  }
+
+  &--upper {
+    text-transform: uppercase;
+  }
+
+  &--primary {
+    color: @color-primary;
+  }
+
+  &--white {
+    color: #ffffff;
+  }
+
+  &--gray {
+    color: #999999;
+  }
+
+  &--gray-dark {
+    color: #666666;
+  }
+
+  &--light {
+    font-weight: 300;
+  }
+
+  &--medium {
+    font-weight: 500;
+  }
+
+  &--bold {
+    font-weight: 700;
+  }
+
+  &--my-sm {
+    p:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+}

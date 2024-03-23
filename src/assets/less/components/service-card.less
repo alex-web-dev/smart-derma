@@ -1,0 +1,142 @@
+.service-card {
+  padding: 24px 10px 24px 25px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: @color-primary-white;
+  transition: background-color 0.3s;
+
+  &__icon {
+    position: relative;
+    margin-bottom: 16px;
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(@color-primary, 0.1);
+    border-radius: 50%;
+    transition: background-color 0.3s;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 55px;
+      height: 55px;
+      background-color: @color-primary;
+      border-radius: 50%;
+      transition: background-color 0.3s;
+    }
+
+    svg,
+    img {
+      position: relative;
+      z-index: 1;
+    }
+
+    svg {
+      fill: #fff;
+      transition: fill 0.3s;
+    }
+    
+
+    &--mb-lg {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__title {
+    margin-bottom: auto;
+    transition: color 0.3s;
+
+    &--sm {
+      max-width: 280px; 
+    }
+  }
+
+  &__text {
+    margin-top: 5px;
+    line-height: 1.43;
+    transition: color 0.3s;
+  }
+
+  &__btn {
+    margin-top: 12px;
+
+    svg {
+      width: 24px;
+      height: 12px;
+      fill: @color-primary;
+      transition: fill 0.3s;
+    }
+  }
+
+  &:hover {
+    background-color: @color-primary; 
+  }
+
+  &:hover &__text {
+    color: #fff;
+  }
+  
+  &:hover &__title {
+    color: #fff;
+  }
+
+  &:hover &__icon {
+    background-color: rgba(#fff, 0.1);
+
+    &:before {
+      background-color: #fff;
+    }
+
+    svg {
+      fill: @color-primary;
+    }
+  }
+
+  &:hover &__btn {
+    svg {
+      fill: #fff;
+    }
+  }
+  
+  &--white {
+    background-color: #fff;
+    box-shadow: 0px 4px 20px rgba(76, 76, 76, 0.1);
+    border-radius: 8px;
+  }
+
+  &--sm {
+    padding: 24px 8px 30px 20px;
+  }
+
+  @media (max-width: 991px) {
+    &__btn {
+      margin-top: 20px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    padding: 20px 5px 24px 15px;
+
+    &__title {
+      &--sm {
+        font-size: 15px;
+      }
+    }
+
+    &__text {
+      font-size: 13px;
+    }
+
+    &__icon {
+      &--mb-lg {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

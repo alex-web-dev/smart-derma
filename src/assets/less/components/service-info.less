@@ -1,0 +1,41 @@
+.service-info {
+  &__content {
+    padding: 56px 27px 54px 43px;
+    background-color: @color-primary-white;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    h1,
+    h2,
+    h3,
+    h4 {
+      padding-bottom: 12px;
+      text-transform: uppercase;
+      border-bottom: 1px solid #dae9e9;
+    }
+  }
+
+  &__btn {
+    margin-top: 30px;
+  }
+
+  @media (max-width: 991px) {
+    &__content {
+      padding: 40px 27px 45px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    &__content {
+      padding: 24px 15px 32px;
+    }
+
+    &__btn {
+      margin-top: 24px;
+    }
+  }
+}

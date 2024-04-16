@@ -56,7 +56,7 @@
     "normalize.css": "^8.0.1",
     "resize-observer-polyfill": "^1.5.1",
     "simplebar": "^6.2.5",
-    "sweetalert2": "^11.10.6",
+    "sweetalert2": "^11.4.8",
     "swiper": "^11.0.7"
   }
 }

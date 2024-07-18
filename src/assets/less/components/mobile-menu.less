@@ -7,39 +7,27 @@
   height: calc(100% - 60px);
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow-y: auto;
   visibility: hidden;
   height: 0;
   background-color: #fff;
   transition: visibility 0.5s, height 0.5s;
 
   &__main {
-    padding: 34px 15px 27px;
-  }
-
-  &__list {
-    margin: -15px -7.5px 0;
-    display: flex;
-    flex-wrap: wrap;
+    padding: 20px 15px 38px;
   }
 
   &__item {
-    margin: 15px 7.5px 0;
+    border-top: 1px solid #ededed;
 
-    &:nth-child(2n) {
-      width: calc(57% - 15px);
-    }
-
-    &:nth-child(2n + 1) {
-      width: calc(43% - 15px);
-    }
-
-    &:not(:last-child):not(:nth-last-child(2)) {
-      min-height: 44px;
+    &:last-child {
+      border-bottom: 1px solid #ededed;
     }
   }
 
   &__link {
+    padding: 14px 0;
+    width: 100%;
     display: flex;
     align-items: flex-start;
     text-align: left;
@@ -48,6 +36,22 @@
     line-height: 1.375;
     letter-spacing: 0.02em;
     color: @color-primary;
+
+    &.accordion__btn {
+      &:after {
+        .pseudo-icon('../img/icons/right-round.svg', 23px, 23px);
+        margin-left: auto;
+        align-self: center;
+        background-size: 10px 16px;
+        transition: transform 0.5s;
+      }
+
+      &--active {
+        &:after {
+          transform: rotate(90deg);
+        }
+      }
+    }
 
     &-icon {
       flex: 0 0 auto;
@@ -62,12 +66,18 @@
     }
   }
 
+  &__submenu {
+    border-top: 1px solid #ededed;
+  }
+
   &__main-btns {
-    margin-top: 23px;
+    margin-top: 38px;
     display: flex;
   }
 
   &__main-btn {
+    padding-top: 9px;
+    padding-bottom: 9px;
     flex: 1 1 auto;
 
     &:first-child {
@@ -80,13 +90,12 @@
   }
 
   &__categories {
-    overflow-y: auto;
     padding: 17px 15px 0;
     flex: 1 1 auto;
     display: flex;
     flex-direction: column;
     background-color: @color-primary-light;
-    
+
     &-list {
       margin: -14px -7px 0;
       display: flex;
@@ -96,18 +105,7 @@
 
   &__category {
     margin: 14px 7px 0;
-
-    &:nth-child(2n) {
-      width: calc(45.5% - 14px);
-    }
-
-    &:nth-child(2n + 1) {
-      width: calc(54.5% - 14px);
-    }
-
-    &:last-child {
-      width: calc(100% - 14px);
-    }
+    width: calc(50% - 14px);
 
     &-link {
       display: flex;
@@ -134,7 +132,7 @@
 
   &__callback {
     margin-top: auto;
-    padding: 20px 15px 32px;
+    padding: 38px 15px 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -151,6 +149,38 @@
     &--active {
       visibility: visible;
       height: calc(100% - 60px);
+    }
+  }
+
+  @media (max-width: 395px) {
+    &__category {
+      &-link {
+        font-size: 15px;
+      }
+    }
+  }
+
+  @media (max-width: 375px) {
+    &__category {
+      &-link {
+        font-size: 14px;
+      }
+    }
+  }
+
+  @media (max-width: 360px) {
+    &__category {
+      &-link {
+        font-size: 13px;
+      }
+    }
+  }
+
+  @media (max-width: 340px) {
+    &__category {
+      &-link {
+        font-size: 12px;
+      }
     }
   }
 }
